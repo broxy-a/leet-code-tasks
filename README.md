@@ -1,18 +1,17 @@
-## Getting Started
+# 🧠 LeetCode Java задачи с пояснениями.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Тут будет хранится разбор задач с сайта [LeetCode](https://leetcode.com/). Все задачи выполнены на языке Java. Каждая задача сопровождается примером и ключевыми моментами.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## ➕ TwoSum
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Нужно найти индексы двух чисел в массиве, которые в сумме дают target.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+```java
+int[] nums = {2, 7, 11, 15}; int target = 9; -> [0, 1].
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+🔹 Основные моменты:
+    📌 Первый цикл перебирает массив nums.
+    📌 Второй цикл ищет вторую часть пары nums[j].
+    📌 Подойдетдля маленьких массивов (n < 100) или когда важна простота кода.
