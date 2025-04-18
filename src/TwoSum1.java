@@ -2,9 +2,13 @@ import java.util.Arrays;
 
 public class TwoSum1 {
     public int[] twoSum(int[] nums, int target) {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
+
+        // Первый цикл проходит по массиву чисел.
+        for (int i = 0; i < nums.length; i++) { 
+            for (int j = i + 1; j < nums.length; j++) { // Вложенный цикл, проходится по массиву, но при этом ищет второе число для target.
+
+
+                if (nums[i] + nums[j] == target) { // Если числа i и j в сумме дают target, значит вернем их индексы в виде массива.
                    int[] result = {i, j};
                    return result;
                 }   
