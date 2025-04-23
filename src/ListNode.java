@@ -11,7 +11,7 @@
            * Новый список должен состоять из связанных узлов исходных списокв.
            * Новый список надо отсортировать по возрастанию.
          */
-        public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
             ListNode dummy = new ListNode(0); // Фиктивный узел
             ListNode current = dummy;
 
@@ -33,6 +33,17 @@
 
         }
         public static void main(String[] args) {
+            ListNode list1 = new ListNode(1, new  ListNode(2, new  ListNode(3, new  ListNode(4))));
+            ListNode list2 = new ListNode(1, new  ListNode(2, new  ListNode(3, new  ListNode(4))));
+            print(mergeTwoLists(list1,list2));
 
+            print(mergeTwoLists(null, new ListNode(0)));
+        }
+        static void print(ListNode node) {
+            while (node != null) {
+                System.out.print(node.val + " ");
+                node = node.next;
+            }
+            System.out.println();
         }
     }
