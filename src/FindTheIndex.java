@@ -11,7 +11,8 @@ public class FindTheIndex {
         }
             for (int i = 0; i <= haystack.length() - needle.length(); i++) { // Цикл проходит длинну слов от haystack до needle что бы знать границы.
 
-                if (haystack.substring(i, i + needle.length()).equals(needle)) { // Если подстрока haystack от i до needle содержит подстроку needle то вернуть индекс этой подстроки.
+                if (haystack.substring(i, i + needle.length()).equals(needle)) { // Если подстрока haystack с позиции i совпадает с needle, вернуть i как индекс вхождения.
+
                     return i;
                 }
             }
