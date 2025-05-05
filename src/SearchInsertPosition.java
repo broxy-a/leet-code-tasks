@@ -29,5 +29,9 @@ public class SearchInsertPosition {
         int[] nums = {1,3,5,6};
         int target = 6;
         System.out.println(sap.searchInsert(nums, target));
+
+        int[] nums1 = {1,3,5,7};
+        int target1 = 8;
+        System.out.println(sap.searchInsert(nums1, target1));
     }
 }
