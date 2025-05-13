@@ -10,7 +10,7 @@ public class SqrtX {
             long s = (long) mid * mid; // Квадрат числа
 
             if (s == x) { // Если корень равен x
-                return mid; // Вернуть среднее число
+                return mid;
             } else if (s < x) { // Если корень меньше х
                 left = mid + 1; // Ищем в правой части
             } else {
