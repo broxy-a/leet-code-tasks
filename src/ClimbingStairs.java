@@ -21,6 +21,7 @@ public class ClimbingStairs {
         System.out.println(new ClimbingStairs().climbStairs(10));
         System.out.println(new ClimbingStairs().climbStairs(45));
         System.out.println(new ClimbingStairs().climbStairs(7));
+        System.out.println();
 
     }
 }

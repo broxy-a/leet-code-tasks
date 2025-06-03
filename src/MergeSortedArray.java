@@ -29,7 +29,7 @@ public class MergeSortedArray {
 
         // Если массив nums2 закончился раньше, то тогда копируем остатки в nums1
         if (j >= 0) {
-            System.arraycopy(nums2, j, nums1, i + 1, j + 1);
+            System.arraycopy(nums2, 0, nums1, 0, j + 1);
         }
     }
 
