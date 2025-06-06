@@ -51,4 +51,30 @@ class Solution {
             inorder(node.right, result);
         }
     }
+    public static void main(String[] args) {
+        TreeNode n = new TreeNode(1);
+        n.right = new TreeNode(2);
+        n.right.left = new TreeNode(3);
+
+
+        Solution s = new Solution();
+        List<Integer> result1 = s.inorderTraversal(n);
+        System.out.println(result1);
+
+
+        TreeNode n1 = new TreeNode(1);
+        n1.left = new TreeNode(2);
+        n1.left.left = new TreeNode(4);
+        n1.left.right = new TreeNode(5);
+        n1.left.right.left = new TreeNode(6);
+        n1.left.right.right = new TreeNode(7);
+
+        n1.right = new TreeNode(3);
+        n1.right.right = new TreeNode(8);
+        n1.right.right.left = new TreeNode(9);
+
+        Solution s1 = new Solution();
+        List<Integer> result2 = s1.inorderTraversal(n1);
+        System.out.println(result2);
+    }
 }

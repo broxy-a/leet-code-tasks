@@ -21,7 +21,7 @@ public class TreeNodeSame {
       }
 
 
-      class Solution {
+      static class Solution {
           public boolean isSameTree(TreeNodeSame p, TreeNodeSame q) {
               // Если узлы p и q равны null, значит это конец, вернуть true
               if (p == null && q == null) return true;
@@ -35,5 +35,32 @@ public class TreeNodeSame {
               // Рекурсивная проверка: оба дерева должны быть идентичны.
               return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
           }
+      }
+
+      public static void main(String[] args) {
+          TreeNodeSame n = new TreeNodeSame(1);
+          n.left = new TreeNodeSame(2);
+          n.right = new TreeNodeSame(3);
+
+          TreeNodeSame n1 = new TreeNodeSame(1);
+          n1.left = new TreeNodeSame(2);
+          n1.right = new TreeNodeSame(3);
+
+          Solution s = new Solution();
+          boolean result = s.isSameTree(n, n1);
+          System.out.println(result);
+
+          TreeNodeSame n2 = new TreeNodeSame(1);
+          n2.left = new TreeNodeSame(2);
+          n2.right = new TreeNodeSame(1);
+
+          TreeNodeSame n3 = new TreeNodeSame(1);
+          n3.left = new TreeNodeSame(1);
+          n3.right = new TreeNodeSame(2);
+
+          Solution s1 = new Solution();
+          boolean result1 = s1.isSameTree(n2, n3);
+          System.out.println(result1);
+
       }
 }
